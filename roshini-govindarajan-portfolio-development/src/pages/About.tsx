@@ -55,7 +55,7 @@ export default function About() {
             <figure style={{ margin: 0 }}>
               <div className="img-frame">
                 <img
-                  src="/images/portrait.jpg"
+                  src="/images/Potrait for website.png"
                   alt="Editorial ink illustration portrait representing Roshini Govindarajan"
                   width="800"
                   height="1000"
