@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap for the Roshini Govindarajan portfolio.
+  NOTE: Replace https://www.roshini-govindarajan.example with the production
+  domain before submitting to search engines. Route fragments (#/...) are
+  included for completeness; update if the site is deployed with server-side
+  routing or statically rendered pages.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.roshini-govindarajan.example/</loc></url>
+  <url><loc>https://www.roshini-govindarajan.example/#/work</loc></url>
+  <url><loc>https://www.roshini-govindarajan.example/#/about</loc></url>
+  <url><loc>https://www.roshini-govindarajan.example/#/contact</loc></url>
+  <url><loc>https://www.roshini-govindarajan.example/#/resume</loc></url>
+  <url><loc>https://www.roshini-govindarajan.example/#/case-studies/formula-builder</loc></url>
+  <url><loc>https://www.roshini-govindarajan.example/#/case-studies/unified-qa</loc></url>
+  <url><loc>https://www.roshini-govindarajan.example/#/case-studies/universal-crawler</loc></url>
+  <url><loc>https://www.roshini-govindarajan.example/#/work/bikessy</loc></url>
+  <url><loc>https://www.roshini-govindarajan.example/#/work/inktales</loc></url>
+  <url><loc>https://www.roshini-govindarajan.example/#/work/brand-and-beyond</loc></url>
+</urlset>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace with the production domain when deployed.
+Sitemap: https://www.roshini-govindarajan.example/sitemap.xml
