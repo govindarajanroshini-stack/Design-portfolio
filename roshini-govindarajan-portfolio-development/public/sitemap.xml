@@ -7,15 +7,15 @@
   routing or statically rendered pages.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.roshini-govindarajan.example/</loc></url>
-  <url><loc>https://www.roshini-govindarajan.example/#/work</loc></url>
-  <url><loc>https://www.roshini-govindarajan.example/#/about</loc></url>
-  <url><loc>https://www.roshini-govindarajan.example/#/contact</loc></url>
-  <url><loc>https://www.roshini-govindarajan.example/#/resume</loc></url>
-  <url><loc>https://www.roshini-govindarajan.example/#/case-studies/formula-builder</loc></url>
-  <url><loc>https://www.roshini-govindarajan.example/#/case-studies/unified-qa</loc></url>
-  <url><loc>https://www.roshini-govindarajan.example/#/case-studies/universal-crawler</loc></url>
-  <url><loc>https://www.roshini-govindarajan.example/#/work/bikessy</loc></url>
-  <url><loc>https://www.roshini-govindarajan.example/#/work/inktales</loc></url>
-  <url><loc>https://www.roshini-govindarajan.example/#/work/brand-and-beyond</loc></url>
+  <url><loc>https://roshinidesign.com/</loc></url>
+  <url><loc>https://roshinidesign.com/#/work</loc></url>
+  <url><loc>https://roshinidesign.com/#/about</loc></url>
+  <url><loc>https://roshinidesign.com/#/contact</loc></url>
+  <url><loc>https://roshinidesign.com/#/resume</loc></url>
+  <url><loc>https://roshinidesign.com/#/case-studies/formula-builder</loc></url>
+  <url><loc>https://roshinidesign.com/#/case-studies/unified-qa</loc></url>
+  <url><loc>https://roshinidesign.com/#/case-studies/universal-crawler</loc></url>
+  <url><loc>https://roshinidesign.com/#/work/bikessy</loc></url>
+  <url><loc>https://roshinidesign.com/#/work/inktales</loc></url>
+  <url><loc>https://roshinidesign.com/#/work/brand-and-beyond</loc></url>
 </urlset>
