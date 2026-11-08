@@ -261,4 +261,4 @@ export const MAILTO_FREELANCE =
  * Resume PDF — place the file at public/documents/roshini-govindarajan-resume.pdf
  * and every "Download Resume" button across the site works.
  */
-export const RESUME_PDF = "/documents/roshini-govindarajan-resume.pdf";
+export const RESUME_PDF = "/documents/Roshini_Govindarajan_Product Design.pdf";
