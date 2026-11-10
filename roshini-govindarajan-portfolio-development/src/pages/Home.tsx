@@ -25,15 +25,15 @@ export default function Home() {
         </div>
 
         <h1 className="display-1">
-          <span className="hero-line">
+          { /*  <span className="hero-line">
             <span>Designing for people.</span>
           </span>
           <span className="hero-line">
             <span className="it">Thinking through experiences.</span>
-          </span>
+          </span> */
           <span className="hero-line">
             <span>
-              Communicating through <em className="it accent-text">visuals.</em>
+              Accessible by <em className="it accent-text">design.</em>
             </span>
           </span>
         </h1>
@@ -54,7 +54,7 @@ export default function Home() {
           </div>
           <div>
             <p className="prose-serif" style={{ margin: 0 }}>
-              I'm Roshini — a multidisciplinary designer interested in understanding how people
+              I'm Roshini , a multidisciplinary designer interested in understanding how people
               think, behave and interact with digital products. With a background in engineering,
               visual communication and product design, I bring together analytical thinking and
               visual sensitivity to create thoughtful, accessible and meaningful digital
