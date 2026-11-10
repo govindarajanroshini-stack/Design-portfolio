@@ -25,12 +25,12 @@ export default function Home() {
         </div>
 
         <h1 className="display-1">
-          { /*  <span className="hero-line">
+            <span className="hero-line">
             <span>Designing for people.</span>
           </span>
           <span className="hero-line">
             <span className="it">Thinking through experiences.</span>
-          </span> */
+          </span> 
           <span className="hero-line">
             <span>
               Accessible by <em className="it accent-text">design.</em>
