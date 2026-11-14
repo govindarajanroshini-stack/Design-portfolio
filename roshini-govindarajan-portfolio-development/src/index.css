@@ -1342,6 +1342,50 @@ a:hover .project-title {
   gap: var(--grid-gap);
 }
 
+.asset-frame {
+  border: 1px solid var(--rule);
+  background: #111;
+  overflow: hidden;
+}
+.asset-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+}
+.screen-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: var(--grid-gap);
+}
+.screen-card {
+  margin: 0;
+  min-width: 0;
+}
+.screen-card a {
+  display: block;
+  border: 1px solid var(--rule);
+  background: #111;
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+.screen-card a:hover,
+.screen-card a:focus-visible {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+.screen-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.screen-card figcaption {
+  margin-top: 10px;
+  color: var(--secondary-text);
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+
 /* ---------- InkTales IA tree & user flow (editable HTML) ---------- */
 
 .ia-tree {

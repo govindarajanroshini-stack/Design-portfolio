@@ -162,6 +162,48 @@ export function Plate({
   );
 }
 
+export function AssetFigure({
+  src,
+  alt,
+  caption,
+  ratio,
+  loading = "lazy",
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+  ratio?: string;
+  loading?: "eager" | "lazy";
+}) {
+  return (
+    <figure className="fig" style={{ marginBlock: 0 }}>
+      <div className="asset-frame" style={ratio ? { aspectRatio: ratio } : undefined}>
+        <img src={src} alt={alt} loading={loading} />
+      </div>
+      {caption ? <figcaption className="fig-caption"><span>{caption}</span></figcaption> : null}
+    </figure>
+  );
+}
+
+export function ScreenGallery({
+  screens,
+}: {
+  screens: { src: string; title: string; alt: string }[];
+}) {
+  return (
+    <div className="screen-gallery" aria-label="InkTales application screen gallery">
+      {screens.map((screen) => (
+        <figure className="screen-card" key={screen.src}>
+          <a href={screen.src} target="_blank" rel="noopener noreferrer" aria-label={`Open larger view: ${screen.title}`}>
+            <img src={screen.src} alt={screen.alt} loading="lazy" />
+          </a>
+          <figcaption>{screen.title}</figcaption>
+        </figure>
+      ))}
+    </div>
+  );
+}
+
 /* ------------------------- contents rail -------------------------- */
 
 export interface Chapter {
