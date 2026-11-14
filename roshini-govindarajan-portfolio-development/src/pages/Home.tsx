@@ -20,44 +20,33 @@ export default function Home() {
           }}
         >
           <span className="meta">Portfolio — Vol. 01</span>
-          <span className="meta">UX Research · Product Design · Behavioural Design</span>
+          <span className="meta">PRODUCT DESIGNER / ENTERPRISE UX / ACCESSIBILITY</span>
           <span className="meta">Chennai, India</span>
         </div>
 
         <h1 className="display-1">
             <span className="hero-line">
-            <span>Designing for people.</span>
-          </span>
-          <span className="hero-line">
-            <span className="it">Thinking through experiences.</span>
-          </span> 
-          <span className="hero-line">
-            <span>
-              Accessible by <em className="it accent-text">design.</em>
-            </span>
+            <span>Turning complexity into clarity.</span>
           </span>
         </h1>
 
         <div className="fade-up hero-lower-grid" style={{ animationDelay: "0.5s" }}>
           <div>
             <p className="meta meta-light" style={{ marginBottom: 26, lineHeight: 2.1 }}>
-              UX Researcher<span className="dot-sep">·</span>Product Designer
-              <br />
-              Behavioural Designer
+              Open to Product Designer and UX/UI Designer opportunities.
             </p>
             <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
               <span className="accent-sq" aria-hidden="true" />
               <span className="meta" style={{ color: "var(--foreground)" }}>
-                Open to full-time opportunities &amp; selected freelance collaborations
+                Product design · Enterprise UX · Accessibility
               </span>
             </div>
           </div>
           <div>
             <p className="prose-serif" style={{ margin: 0 }}>
-              I'm Roshini , a multidisciplinary designer interested in understanding how people
-              think, behave and interact with digital products. With a background in engineering,
-              visual communication and product design, I bring together analytical thinking and
-              visual sensitivity to create thoughtful, accessible and meaningful digital
+              I'm Roshini, a designer working across enterprise products, interface quality and
+              visual communication. I enjoy bringing structure to complex workflows, making
+              information easier to navigate and helping teams create more consistent digital
               experiences.
             </p>
             <div
@@ -70,13 +59,10 @@ export default function Home() {
               }}
             >
               <Link to="/work" className="btn btn-accent">
-                Explore Selected Work <ArrowRight size={14} aria-hidden="true" />
+                Explore selected work <ArrowRight size={14} aria-hidden="true" />
               </Link>
-              <Link to="/about" className="tlink">
-                About Me <ArrowUpRight size={14} aria-hidden="true" />
-              </Link>
-              <Link to="/contact" className="tlink">
-                Let's Connect <ArrowUpRight size={14} aria-hidden="true" />
+              <Link to="/resume" className="tlink">
+                View my resume <ArrowUpRight size={14} aria-hidden="true" />
               </Link>
             </div>
           </div>
@@ -115,12 +101,12 @@ export default function Home() {
 
       {/* ========================== SELECTED WORK ========================== */}
       <section className="container-ed section" aria-label="Selected work" style={{ paddingTop: 20 }}>
-        <SectionHead label="Selected Work" right="01 — 03" accent />
+        <SectionHead label="Selected work" right="01 — 03" accent />
         <p
           className="serif-quote"
           style={{ margin: "clamp(36px, 5vw, 64px) 0 clamp(48px, 6vw, 80px)", maxWidth: "22ch" }}
         >
-          Three case studies, one progression: feature, experience, system.
+          A selection of enterprise product work and digital experiences that reflect how I approach problems, evaluate interfaces and turn ideas into clear design solutions.
         </p>
 
         <div>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { PROJECTS } from "../data/content";
 import { NextProject, Reveal } from "../components/ui";
-import { CaseHero, ChapterRail, Lead, P, Plate, Split, Story } from "../components/case";
+import { AssetFigure, CaseHero, ChapterRail, Lead, P, ScreenGallery, Split, Story } from "../components/case";
 
 const project = PROJECTS[3];
 const next = PROJECTS[5]; // Brand & Beyond
@@ -42,20 +42,34 @@ const FLOW = [
 ];
 
 const UI_SCREENS = [
-  { idx: "03", title: "Home & comic discovery", hint: "/public/images/inktales/discovery.jpg" },
-  { idx: "04", title: "Genre & category browsing", hint: "/public/images/inktales/categories.jpg" },
-  { idx: "05", title: "Comic detail screens", hint: "/public/images/inktales/details.jpg" },
-  { idx: "06", title: "Rental-related screens", hint: "/public/images/inktales/rental.jpg" },
-  { idx: "07", title: "Digital reading interface", hint: "/public/images/inktales/reading.jpg" },
-  { idx: "08", title: "User account & library", hint: "/public/images/inktales/library.jpg" },
+  { idx: "03", title: "Home & comic discovery", src: "/images/projects/inktales/screens/inktales-home-existing-comic.png" },
+  { idx: "04", title: "Genre & category browsing", src: "/images/projects/inktales/screens/inktales-comic-by-volumecomic.png" },
+  { idx: "05", title: "Comic detail screens", src: "/images/projects/inktales/screens/inktales-comic-page-1comic.png" },
+  { idx: "06", title: "Rental-related screens", src: "/images/projects/inktales/screens/inktales-without-rentcomic.png" },
+  { idx: "07", title: "Digital reading interface", src: "/images/projects/inktales/screens/inktales-comic-readcomic.png" },
+  { idx: "08", title: "User account & library", src: "/images/projects/inktales/screens/inktales-shelfcomic.png" },
 ];
 
 const FINAL = [
-  { idx: "09", title: "Home & discovery", hint: "/public/images/inktales/final-home.jpg" },
-  { idx: "10", title: "Comic details", hint: "/public/images/inktales/final-details.jpg" },
-  { idx: "11", title: "Rental experience", hint: "/public/images/inktales/final-rental.jpg" },
-  { idx: "12", title: "Reading interface", hint: "/public/images/inktales/final-reading.jpg" },
+  { idx: "09", title: "Home & discovery", src: "/images/projects/inktales/screens/inktales-home-newbie-comic.png" },
+  { idx: "10", title: "Comic details", src: "/images/projects/inktales/screens/inktales-comic-page-2comic.png" },
+  { idx: "11", title: "Rental experience", src: "/images/projects/inktales/screens/inktales-order-detailscomic.png" },
+  { idx: "12", title: "Reading interface", src: "/images/projects/inktales/screens/inktales-comic-by-chaptercomic.png" },
 ];
+
+const SCREEN_GROUPS = [
+  { label: "App introduction and onboarding", files: ["splash-screencomic.jpg", "onboarding-1comic.png", "onboarding-2comic.png", "onboarding-3comic.png"] },
+  { label: "Sign-in and registration", files: ["sign-incomic.png", "sign-upcomic.png", "questions-1comic.png", "questions-2-1-comic.png"] },
+  { label: "Home, discovery and categories", files: ["home-existing-comic.png", "home-newbie-comic.png", "comic-by-volumecomic.png", "comic-by-chaptercomic.png", "comic-by-chaptercomic-1.png", "searchcomic.png"] },
+  { label: "Comic details and reading", files: ["comic-page-1comic.png", "comic-page-2comic.png", "comic-readcomic.png", "without-rentcomic.png"] },
+  { label: "Comments and interaction", files: ["commentscomic.png", "commentedcomic.png"] },
+  { label: "Rental, coupons and subscription", files: ["couponcomic.png", "coupon-2comic.png", "subcriptioncomic.png"] },
+  { label: "Payment and order confirmation", files: ["payment-methodcomic.png", "payment-method-2comic.png", "payment-successfullcomic.png", "payment-unsuccessfullcomic.png", "order-detailscomic.png"] },
+  { label: "Profile and settings", files: ["morecomic.png", "shelfcomic.png", "settingscomic.png", "log-offcomic.png", "delete-accountcomic.png"] },
+  { label: "Empty, loading and error states", files: ["loading-pagecomic.png", "no-internetcomic.png"] },
+];
+
+const screenPath = (file: string) => `/images/projects/inktales/screens/inktales-${file}`;
 
 const DETAILS = [
   { label: "Project", value: "InkTales" },
@@ -77,14 +91,7 @@ export default function CaseInkTales() {
         status="Concept designed in Figma — not launched"
         cover={
           <div style={{ marginTop: "clamp(40px, 5vw, 72px)" }}>
-            <Plate
-              index="00"
-              title="InkTales — a comic rental app experience"
-              ratio="16 / 9"
-              hint="/public/images/inktales/cover.jpg"
-              kind="Original app screens montage — asset pending"
-              caption="The original InkTales interface will sit in this frame — its own colours, typography and comic artwork unchanged."
-            />
+            <AssetFigure src="/images/projects/inktales/inktales-project-cover.png" alt="InkTales mobile app cover showing a dark comic reading interface with purple accents" ratio="16 / 9" caption="InkTales — supplied project cover visual." />
           </div>
         }
       />
@@ -105,14 +112,7 @@ export default function CaseInkTales() {
             <Story id="s1" num="01" kicker="Project Overview" title="Bringing comic discovery and reading together.">
               <Split
                 figure={
-                  <Plate
-                    index="01"
-                    title="The InkTales application"
-                    ratio="4 / 3"
-                    hint="/public/images/inktales/overview.jpg"
-                    kind="Original app visuals — asset pending"
-                    caption="Original InkTales screens will be placed here — unchanged, as designed."
-                  />
+                  <AssetFigure src="/images/projects/inktales/screens/inktales-home-existing-comic.png" alt="InkTales home screen showing comic discovery content" caption="InkTales — supplied application screen." />
                 }
               >
                 <Lead>
@@ -144,14 +144,7 @@ export default function CaseInkTales() {
                 </P>
               </div>
               <div style={{ marginTop: "clamp(32px, 4vw, 56px)" }}>
-                <Plate
-                  index="02"
-                  title="Discovery, rental and reading — one interface"
-                  ratio="16 / 9"
-                  hint="/public/images/inktales/challenge.jpg"
-                  kind="Original app visuals — asset pending"
-                  caption="Wide composition of the original application visuals will sit here."
-                />
+                <AssetFigure src="/images/projects/inktales/inktales-cover.png" alt="Vintage halftone comic artwork used for the InkTales selected-work cover" ratio="16 / 9" caption="InkTales — supplied selected-work cover visual." />
               </div>
             </Story>
 
@@ -277,13 +270,7 @@ export default function CaseInkTales() {
               <div className="plate-grid-3">
                 {UI_SCREENS.map((s) => (
                   <Reveal key={s.idx}>
-                    <Plate
-                      index={s.idx}
-                      title={s.title}
-                      ratio="3 / 4"
-                      hint={s.hint}
-                      kind="Original app screen — asset pending"
-                    />
+                    <AssetFigure src={s.src} alt={`InkTales ${s.title} screen`} caption={s.title} />
                   </Reveal>
                 ))}
               </div>
@@ -330,14 +317,25 @@ export default function CaseInkTales() {
               <div className="plate-grid-2">
                 {FINAL.map((s) => (
                   <Reveal key={s.idx}>
-                    <Plate
-                      index={s.idx}
-                      title={s.title}
-                      ratio="3 / 4"
-                      hint={s.hint}
-                      kind="Original final screen — asset pending"
-                    />
+                    <AssetFigure src={s.src} alt={`InkTales ${s.title} screen`} caption={s.title} />
                   </Reveal>
+                ))}
+              </div>
+              <div style={{ marginTop: "clamp(56px, 7vw, 96px)" }}>
+                <p className="meta meta-accent" style={{ marginBottom: 18 }}>Complete screen archive</p>
+                <p className="prose-ed" style={{ maxWidth: "58ch", marginBottom: "clamp(28px, 4vw, 48px)" }}>
+                  The supplied screens are grouped by the experience they show. Select any thumbnail
+                  to open the original-size image.
+                </p>
+                {SCREEN_GROUPS.map((group) => (
+                  <div key={group.label} style={{ marginBottom: "clamp(40px, 5vw, 72px)" }}>
+                    <h4 className="display-4" style={{ marginBottom: 22 }}>{group.label}</h4>
+                    <ScreenGallery screens={group.files.map((file) => ({
+                      src: screenPath(file),
+                      title: file.replace(/-comic\.(png|jpg)$/, "").replace(/-/g, " "),
+                      alt: `InkTales application screen: ${file.replace(/-comic\.(png|jpg)$/, "").replace(/-/g, " ")}`,
+                    }))} />
+                  </div>
                 ))}
               </div>
             </Story>

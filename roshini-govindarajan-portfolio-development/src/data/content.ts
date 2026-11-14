@@ -88,9 +88,8 @@ export const PROJECTS: Project[] = [
     tools: "Figma",
     description:
       "A mobile app concept exploring comic discovery, rental and digital reading — organised journeys, clear hierarchy and a reading-first interface.",
-    image: "/images/work-inktales.jpg",
-    imageAlt:
-      "Editorial artwork of ink-drawn comic characters in a loose grid — representative, not an app screen",
+    image: "/images/projects/inktales/inktales-cover.png",
+    imageAlt: "Vintage halftone comic artwork used as the InkTales project cover",
     status: "Personal concept — designed, not launched",
     path: "/work/inktales",
   },
@@ -106,9 +105,8 @@ export const PROJECTS: Project[] = [
     tools: "Figma · Adobe Photoshop",
     description:
       "An independent website concept for a vintage motorcycle business — image-led storytelling, characterful typography and a cohesive four-page experience.",
-    image: "/images/work-bikessy.jpg",
-    imageAlt:
-      "Editorial artwork of a line-drawn motorcycle-style bicycle above blank marketplace cards — representative, not a website screen",
+    image: "/images/projects/bikessy/bikessy-cover.png",
+    imageAlt: "Vintage café racer blueprint with annotated motorcycle details",
     status: "Independent concept website",
     path: "/work/bikessy",
   },

@@ -15,23 +15,25 @@ export default function About() {
           className="about-hero-grid"
         >
           <div>
-            <h1 className="display-2">
-              Hello, <em className="it accent-text">I'm Roshini.</em>
-            </h1>
+            <h1 className="display-2">A designer with an engineering foundation and an eye for clarity.</h1>
             <div style={{ marginTop: "clamp(32px, 4vw, 52px)", display: "grid", gap: 26 }}>
               <p className="prose-serif" style={{ margin: 0 }}>
-                I'm a designer based in Chennai, India, working across user experience research,
-                product design and behavioural design.
+                I'm Roshini Govindarajan, a designer based in Chennai, India. My experience spans
+                enterprise technology, product interfaces and visual communication. I enjoy
+                understanding how digital products work, finding opportunities to make experiences
+                clearer and collaborating with teams to improve the quality and consistency of
+                interfaces.
               </p>
               <p className="prose-ed" style={{ margin: 0 }}>
-                My journey combines an engineering background with an interest in understanding
-                people and designing digital experiences. I enjoy exploring how people interact
-                with products, identifying usability challenges and translating complex problems
-                into clear and meaningful experiences.
+                I began my professional journey in an engineering environment, where I developed an
+                appreciation for structured problem-solving and working with technical teams. Over
+                time, I moved closer to design through visual communication, interface work and
+                product-focused projects.
               </p>
               <p className="prose-ed" style={{ margin: 0 }}>
-                My approach combines <strong>analytical thinking</strong>,{" "}
-                <strong>visual sensitivity</strong> and <strong>curiosity about human behaviour</strong>.
+                Today, my work includes contributing to enterprise product initiatives, evaluating
+                interface functionality, documenting UI patterns and exploring ways to make
+                accessibility and design-system checks more understandable.
               </p>
             </div>
             <div
@@ -77,6 +79,48 @@ export default function About() {
             </figure>
           </Reveal>
         </div>
+      </section>
+
+      <section className="section" aria-label="What I bring to a team">
+        <SectionHead label="What I bring to a team" />
+        <div className="learning-grid" style={{ marginTop: "clamp(40px, 5vw, 72px)" }}>
+          {[
+            "A structured approach to understanding complex interfaces.",
+            "An appreciation for accessibility and consistent design systems.",
+            "The ability to communicate visually and document design decisions.",
+            "Experience collaborating with product and engineering stakeholders.",
+            "A willingness to learn, test assumptions and improve through feedback.",
+          ].map((item, i) => (
+            <Reveal key={item} delay={i * 60}>
+              <div className="learning-item">
+                <span className="li-num">{String(i + 1).padStart(2, "0")}</span>
+                <p>{item}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      <section className="section" aria-label="Design interests">
+        <SectionHead label="Design interests" />
+        <ul className="outline-list" style={{ marginTop: "clamp(40px, 5vw, 72px)" }}>
+          {[
+            "Enterprise product experiences",
+            "Accessibility and inclusive design",
+            "Design systems and interface quality",
+            "Behavioral thinking and decision-making",
+            "Information hierarchy and interaction clarity",
+          ].map((item) => <li key={item}>{item}</li>)}
+        </ul>
+      </section>
+
+      <section className="section" aria-label="Outside the interface">
+        <SectionHead label="Outside the interface" />
+        <p className="prose-serif" style={{ marginTop: "clamp(40px, 5vw, 72px)", maxWidth: "34ch" }}>
+          I'm interested in how people interpret information, make decisions and build confidence
+          when using digital products. These interests continue to shape the questions I bring into
+          my design work.
+        </p>
       </section>
 
       {/* ========================= PHILOSOPHY ========================= */}

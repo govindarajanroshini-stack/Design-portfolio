@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { PROJECTS } from "../data/content";
 import { NextProject, Reveal } from "../components/ui";
-import { CaseHero, ChapterRail, Lead, P, Plate, Split, Story } from "../components/case";
+import { AssetFigure, CaseHero, ChapterRail, Lead, P, Split, Story } from "../components/case";
 
 const project = PROJECTS[4];
 const next = PROJECTS[3]; // InkTales
@@ -32,6 +32,8 @@ function PageBlock({
   plateIndex,
   plateTitle,
   hint,
+  image,
+  imageAlt,
   flip,
   children,
 }: {
@@ -41,6 +43,8 @@ function PageBlock({
   plateIndex: string;
   plateTitle: string;
   hint: string;
+  image: string;
+  imageAlt: string;
   flip?: boolean;
   children: React.ReactNode;
 }) {
@@ -58,13 +62,11 @@ function PageBlock({
       <Split
         flip={flip}
         figure={
-          <Plate
-            index={plateIndex}
-            title={plateTitle}
+          <AssetFigure
+            src={image}
+            alt={imageAlt}
             ratio="16 / 10"
-            hint={hint}
-            kind="Original page screenshot — asset pending"
-            caption={`${title} — the original ${kicker.toLowerCase()} page screenshot will sit in this frame.`}
+            caption={`${title} — supplied Bikessy visual.`}
           />
         }
       >
@@ -85,13 +87,11 @@ export default function CaseBikessy() {
         status="Concept website — Home · About · Services · Contact"
         cover={
           <div style={{ marginTop: "clamp(40px, 5vw, 72px)" }}>
-            <Plate
-              index="00"
-              title="Bikessy — the vintage motorcycle website"
+            <AssetFigure
+              src="/images/projects/bikessy/bikessy-cover-visual.png"
+              alt="Dark Bikessy hero image showing a vintage motorcycle with the Bikessy wordmark"
               ratio="16 / 9"
-              hint="/public/images/bikessy/cover.jpg"
-              kind="Original imagery montage — asset pending"
-              caption="The original Bikessy hero imagery will occupy this frame — its brown palette, vintage typography and motorcycle photography remain unchanged inside the original visuals."
+              caption="Bikessy — supplied website cover visual."
             />
           </div>
         }
@@ -106,13 +106,10 @@ export default function CaseBikessy() {
             <Story id="s1" num="01" kicker="Project Overview" title="The idea behind Bikessy.">
               <Split
                 figure={
-                  <Plate
-                    index="01"
-                    title="Featured vintage motorcycles"
-                    ratio="4 / 3"
-                    hint="/public/images/bikessy/hero.jpg"
-                    kind="Original website imagery — asset pending"
-                    caption="Original Bikessy imagery will be placed here — unchanged, as designed."
+                  <AssetFigure
+                    src="/images/projects/bikessy/bikessy-figure-02.jpg"
+                    alt="Bikessy supporting composition showing vintage motorcycle imagery and interface details"
+                    caption="Bikessy — supplied supporting visual."
                   />
                 }
               >
@@ -169,14 +166,10 @@ export default function CaseBikessy() {
                 </P>
               </div>
               <div style={{ marginTop: "clamp(32px, 4vw, 56px)" }}>
-                <Plate
-                  index="02"
-                  title="Muted, desaturated motorcycle photography"
-                  ratio="16 / 9"
-                  hint="/public/images/bikessy/direction.jpg"
-                  kind="Original photography direction — asset pending"
-                  caption="The original muted motorcycle photography will be placed here, in the portfolio's own framing."
-                />
+                <div className="plate-grid-2">
+                  <AssetFigure src="/images/projects/bikessy/bikessy-figure-03.jpg" alt="Bikessy visual composition with motorcycle imagery and design annotations" caption="Supplied Bikessy figure visual." />
+                  <AssetFigure src="/images/projects/bikessy/bikessy-website-03.jpg" alt="Bikessy website visual showing a vintage motorcycle presentation" caption="Supplied Bikessy website visual." />
+                </div>
               </div>
             </Story>
 
@@ -196,6 +189,8 @@ export default function CaseBikessy() {
                 plateIndex="03"
                 plateTitle="Bikessy — Home page"
                 hint="/public/images/bikessy/home.jpg"
+                image="/images/projects/bikessy/bikessy-home.jpg"
+                imageAlt="Bikessy website home page with vintage motorcycle imagery and navigation"
               >
                 <P>
                   The homepage introduces the Bikessy concept through featured vintage motorcycle
@@ -218,6 +213,8 @@ export default function CaseBikessy() {
                 plateIndex="04"
                 plateTitle="Bikessy — About page"
                 hint="/public/images/bikessy/about.jpg"
+                image="/images/projects/bikessy/bikessy-about.jpg"
+                imageAlt="Bikessy website About page with workshop imagery and editorial content"
                 flip
               >
                 <P>
@@ -241,6 +238,8 @@ export default function CaseBikessy() {
                 plateIndex="05"
                 plateTitle="Bikessy — Services page"
                 hint="/public/images/bikessy/services.jpg"
+                image="/images/projects/bikessy/bikessy-website-03.jpg"
+                imageAlt="Bikessy website service visual with motorcycle workshop imagery"
               >
                 <P>
                   The Services page presents servicing-related offerings through large photographic
@@ -270,6 +269,8 @@ export default function CaseBikessy() {
                 plateIndex="06"
                 plateTitle="Bikessy — Contact page"
                 hint="/public/images/bikessy/contact.jpg"
+                image="/images/projects/bikessy/bikessy-website-04.jpg"
+                imageAlt="Bikessy website visual showing a vintage motorcycle presentation and page layout"
                 flip
               >
                 <P>The Contact page organises communication into three visual sections:</P>
