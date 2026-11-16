@@ -1354,9 +1354,9 @@ a:hover .project-title {
   max-height: 80vh;
   object-fit: contain;
 }
-.screen-gallery {
+.inktales-case .screen-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--grid-gap);
 }
 .screen-card {
@@ -1369,15 +1369,41 @@ a:hover .project-title {
   background: #111;
   transition: border-color 180ms ease, transform 180ms ease;
 }
+.inktales-case .screen-card a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(320px, 56vh, 520px);
+  overflow: hidden;
+}
 .screen-card a:hover,
 .screen-card a:focus-visible {
   border-color: var(--accent);
   transform: translateY(-3px);
 }
-.screen-card img {
+.inktales-case .screen-card img {
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.bikessy-case .bikessy-hero-visual .asset-frame img,
+.inktales-case .inktales-hero-visual .asset-frame img {
+  display: block;
+  width: 92%;
+  height: auto;
+  max-height: none;
+  margin-inline: auto;
+  object-fit: contain;
+}
+.inktales-case .page-hero {
+  padding-top: clamp(112px, 14vh, 168px);
+  padding-bottom: clamp(36px, 5vw, 64px);
+}
+.inktales-case .page-hero .case-hero-meta {
+  margin-top: clamp(28px, 3.5vw, 48px) !important;
 }
 .screen-card figcaption {
   margin-top: 10px;
@@ -1775,6 +1801,9 @@ a.contact-row:hover .cr-value {
   .ia-tree {
     grid-template-columns: 1fr;
   }
+  .inktales-case .screen-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .ia-children {
     border-left: none;
     border-top: 1px solid var(--rule-strong);
@@ -1898,6 +1927,12 @@ a.contact-row:hover .cr-value {
   }
   .project-meta-grid {
     grid-template-columns: 1fr;
+  }
+  .inktales-case .screen-gallery {
+    grid-template-columns: 1fr;
+  }
+  .inktales-case .screen-card a {
+    height: min(68svh, 560px);
   }
 }
 

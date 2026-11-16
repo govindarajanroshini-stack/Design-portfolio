@@ -78,7 +78,7 @@ function PageBlock({
 
 export default function CaseBikessy() {
   return (
-    <article>
+    <article className="bikessy-case">
       <CaseHero
         project={project}
         focus="Visual Design · UX/UI Design — vintage motorcycle website concept"
@@ -86,11 +86,11 @@ export default function CaseBikessy() {
         contribution="Visual Designer & UX/UI Designer — concept, art direction and page design"
         status="Concept website — Home · About · Services · Contact"
         cover={
-          <div style={{ marginTop: "clamp(40px, 5vw, 72px)" }}>
+          <div className="bikessy-hero-visual" style={{ marginTop: "clamp(40px, 5vw, 72px)" }}>
             <AssetFigure
               src="/images/projects/bikessy/bikessy-cover-visual.png"
               alt="Dark Bikessy hero image showing a vintage motorcycle with the Bikessy wordmark"
-              ratio="16 / 9"
+              ratio="1.92 / 1"
               caption="Bikessy — supplied website cover visual."
             />
           </div>

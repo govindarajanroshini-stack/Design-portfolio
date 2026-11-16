@@ -59,17 +59,35 @@ const FINAL = [
 
 const SCREEN_GROUPS = [
   { label: "App introduction and onboarding", files: ["splash-screencomic.jpg", "onboarding-1comic.png", "onboarding-2comic.png", "onboarding-3comic.png"] },
-  { label: "Sign-in and registration", files: ["sign-incomic.png", "sign-upcomic.png", "questions-1comic.png", "questions-2-1-comic.png"] },
+  { label: "Sign-in and registration", files: ["sign-incomic.png", "sign-upcomic.png", "questions-1comic.png", "persona-q-comic.png"] },
   { label: "Home, discovery and categories", files: ["home-existing-comic.png", "home-newbie-comic.png", "comic-by-volumecomic.png", "comic-by-chaptercomic.png", "comic-by-chaptercomic-1.png", "searchcomic.png"] },
   { label: "Comic details and reading", files: ["comic-page-1comic.png", "comic-page-2comic.png", "comic-readcomic.png", "without-rentcomic.png"] },
   { label: "Comments and interaction", files: ["commentscomic.png", "commentedcomic.png"] },
   { label: "Rental, coupons and subscription", files: ["couponcomic.png", "coupon-2comic.png", "subcriptioncomic.png"] },
   { label: "Payment and order confirmation", files: ["payment-methodcomic.png", "payment-method-2comic.png", "payment-successfullcomic.png", "payment-unsuccessfullcomic.png", "order-detailscomic.png"] },
-  { label: "Profile and settings", files: ["morecomic.png", "shelfcomic.png", "settingscomic.png", "log-offcomic.png", "delete-accountcomic.png"] },
+  { label: "Profile and settings", files: ["morecomic.png", "shelfcomic.png", "settings-comic.png", "log-off-comic.png", "delete-account-comic.png"] },
   { label: "Empty, loading and error states", files: ["loading-pagecomic.png", "no-internetcomic.png"] },
 ];
 
 const screenPath = (file: string) => `/images/projects/inktales/screens/inktales-${file}`;
+const SCREEN_DETAILS: Record<string, { title: string; alt: string }> = {
+  "persona-q-comic.png": {
+    title: "Persona Q — genre selection",
+    alt: "InkTales onboarding screen asking users to choose up to three comic genres, including superhero, fantasy, crime, comedy, manga, and adventure.",
+  },
+  "settings-comic.png": {
+    title: "Settings",
+    alt: "InkTales profile settings screen showing account details, language, image resolution, cache, notifications, and reading sync options.",
+  },
+  "log-off-comic.png": {
+    title: "Log off confirmation",
+    alt: "InkTales profile screen with a confirmation dialog asking whether to log out.",
+  },
+  "delete-account-comic.png": {
+    title: "Delete account confirmation",
+    alt: "InkTales profile screen with a confirmation dialog explaining that deleting the account permanently removes its data.",
+  },
+};
 
 const DETAILS = [
   { label: "Project", value: "InkTales" },
@@ -82,7 +100,7 @@ const DETAILS = [
 
 export default function CaseInkTales() {
   return (
-    <article>
+    <article className="inktales-case">
       <CaseHero
         project={project}
         focus="UI/UX Design — comic discovery, rental & digital reading"
@@ -90,8 +108,8 @@ export default function CaseInkTales() {
         contribution="UI/UX Designer — journeys, information architecture and interface design"
         status="Concept designed in Figma — not launched"
         cover={
-          <div style={{ marginTop: "clamp(40px, 5vw, 72px)" }}>
-            <AssetFigure src="/images/projects/inktales/inktales-project-cover.png" alt="InkTales mobile app cover showing a dark comic reading interface with purple accents" ratio="16 / 9" caption="InkTales — supplied project cover visual." />
+          <div className="inktales-hero-visual" style={{ marginTop: "clamp(28px, 3.5vw, 48px)" }}>
+            <AssetFigure src="/images/projects/inktales/inktales-project-cover.png" alt="InkTales mobile app cover showing a dark comic reading interface with purple accents" ratio="1.92 / 1" caption="InkTales — supplied project cover visual." />
           </div>
         }
       />
@@ -330,11 +348,16 @@ export default function CaseInkTales() {
                 {SCREEN_GROUPS.map((group) => (
                   <div key={group.label} style={{ marginBottom: "clamp(40px, 5vw, 72px)" }}>
                     <h4 className="display-4" style={{ marginBottom: 22 }}>{group.label}</h4>
-                    <ScreenGallery screens={group.files.map((file) => ({
-                      src: screenPath(file),
-                      title: file.replace(/-comic\.(png|jpg)$/, "").replace(/-/g, " "),
-                      alt: `InkTales application screen: ${file.replace(/-comic\.(png|jpg)$/, "").replace(/-/g, " ")}`,
-                    }))} />
+                    <ScreenGallery screens={group.files.map((file) => {
+                      const detail = SCREEN_DETAILS[file];
+                      const title = detail?.title ?? file.replace(/-comic\.(png|jpg)$/, "").replace(/-/g, " ");
+                      const alt = detail?.alt ?? `InkTales application screen: ${title}`;
+                      return {
+                        src: screenPath(file),
+                        title,
+                        alt,
+                      };
+                    })} />
                   </div>
                 ))}
               </div>
